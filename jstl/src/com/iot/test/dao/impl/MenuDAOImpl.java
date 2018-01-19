@@ -25,8 +25,8 @@ public class MenuDAOImpl implements MenuDAO{
 		String sql = "select * from menu order by mNum";	
 
 		try {
-			//con = DBCon.getCon();
-			con = DBConTest.getCon();
+			con = DBCon.getCon();
+			//con = DBConTest.getCon();
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 			while(rs.next()) {
